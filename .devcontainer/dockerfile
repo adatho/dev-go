@@ -1,0 +1,7 @@
+# version 1.0.0
+FROM registry.access.redhat.com/ubi9/ubi-minimal
+USER root
+ENV TZ=Europe\Berlin
+RUN mkdir /app && mkdir /src
+RUN microdnf update -y && microdnf install golang -y
+WORKDIR /src

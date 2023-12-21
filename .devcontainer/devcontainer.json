@@ -1,0 +1,19 @@
+{
+    "name": "Go Dev Container",
+    "build": { "dockerfile": "dockerfile" },
+  
+    "customizations": {
+      "vscode": {
+        "extensions": [
+            "golang.go",
+            "EditorConfig.EditorConfig"
+        ]
+      }
+    },
+  
+    "forwardPorts": [5000],
+
+    "workspaceMount": "source=${localWorkspaceFolder},target=/src,type=bind,consistency=cached",
+    "workspaceFolder": "/src"
+  }
+  
